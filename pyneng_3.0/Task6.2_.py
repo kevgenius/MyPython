@@ -12,15 +12,21 @@
 
 #Решение:
 ip_address = input("Enter ip address: \n")
-octets_list = ip_address.split(".")
+bytes_list = ip_address.split(".")
 
-if int(octets_list[0]) in range(224) and ip_address != "0.0.0.0":
-    print("unicast")
-elif int(octets_list[0]) in range(224, 240):
-    print("multicast")
-elif ip_address == "255.255.255.255":
-    print("local broadcast")
-elif ip_address == "0.0.0.0":
-    print("unassigned")
-else:
-    print("unused")
+for byte in bytes_list:
+    if int(byte) in range(0, 256) and len(bytes_list) == 4 and byte.isdigit():
+        if int(bytes_list[0]) in range(224) and ip_address != "0.0.0.0":
+            print("unicast")
+        elif int(bytes_list[0]) in range(224, 240):
+            print("multicast")
+        elif ip_address == "255.255.255.255":
+            print("local broadcast")
+        elif ip_address == "0.0.0.0":
+            print("unassigned")
+        else:
+            print("unused")
+        break
+    else:
+        print("Bad address!")
+        break
