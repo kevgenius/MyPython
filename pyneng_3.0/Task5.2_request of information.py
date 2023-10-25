@@ -54,4 +54,4 @@ Mask:
 {1:08b} {2:08b} {3:08b} {4:08b}
 """.format(mask, octet1, octet2, octet3, octet4)
 print(mask_template)
-print(octets)
+
