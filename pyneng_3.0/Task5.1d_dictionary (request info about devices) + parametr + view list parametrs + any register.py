@@ -39,5 +39,5 @@ parameter = list(parameter)
 parameter = ",".join(parameter)
 
 parameter = input("Enter name parameter" + "(" + parameter + "):\n")
-print((london_co[device]).setdefault(parameter, "Такого параметра нет."))
+print((london_co[device]).get(parameter, "Такого параметра нет."))
 

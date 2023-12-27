@@ -31,7 +31,7 @@ octet4 = int(octet4)
 
 ip_template = """
 Network:
-{0:<} {1:<} {2:<} {3:<}
+{0:>8} {1:>8} {2:>8} {3:>8}
 {0:08b} {1:08b} {2:08b} {3:08b}
 """.format(octet1, octet2, octet3, octet4)
 print(ip_template)
@@ -50,7 +50,7 @@ mask = "/" + mask
 mask_template = """
 Mask:
 {0}
-{1:<} {2:<} {3:<} {4:<}
+{1:>8} {2:>8} {3:>8} {4:>8}
 {1:08b} {2:08b} {3:08b} {4:08b}
 """.format(mask, octet1, octet2, octet3, octet4)
 print(mask_template)
